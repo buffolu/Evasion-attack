@@ -1,0 +1,13 @@
+.venv
+.idea
+# Ignore everything in songs/
+songs/*
+
+# But not the original_song folders
+!songs/*/Al James - Schoolboy Facination/
+
+# But ignore everything inside original_song folders
+songs/*/Al James - Schoolboy Facination/*
+
+# Except the song_name.stem.mp3 file
+!songs/*/Al James - Schoolboy Facination/*.stem.mp3
