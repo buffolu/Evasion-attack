@@ -1,5 +1,12 @@
 .venv
 .idea
+input
+outputs
+*.egg-info
+
+__pycache__/
+*.pt
+*.pth
 # Ignore everything in songs/
 songs/*
 
@@ -11,3 +18,4 @@ songs/*/Al James - Schoolboy Facination/*
 
 # Except the song_name.stem.mp3 file
 !songs/*/Al James - Schoolboy Facination/*.stem.mp3
+

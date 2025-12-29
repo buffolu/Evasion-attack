@@ -1,0 +1,34 @@
+[project]
+name = "evasion-attack"
+version = "0.1.0"
+description = "Adversarial attack on Demucs source separation"
+readme = "README.md"
+requires-python = ">=3.10,<3.11"
+
+dependencies = [
+    "torch==2.2.0",
+    "torchaudio==2.2.0",
+    "torchvision==0.17.0",
+    "demucs",
+    "numpy<2",
+    "scipy",
+    "soundfile",
+    "ffmpeg-python",
+    "tqdm",
+    "torchcodec",
+]
+
+[dependency-sources]
+torch = { index = "pytorch-cu121" }
+torchaudio = { index = "pytorch-cu121" }
+torchvision = { index = "pytorch-cu121" }
+
+[project.scripts]
+evasion-attack = "demucs_attack.cli:main"
+
+[tool.uv]
+package = true
+
+[[tool.uv.index]]
+name = "pytorch-cu121"
+url = "https://download.pytorch.org/whl/cu121"

@@ -1,0 +1,8 @@
+model: htdemucs
+device: cuda
+attack:
+  iterations: 4000
+  epsilon: 0.001
+  lr: 0.00005
+defense:
+  epsilon: 0.003
